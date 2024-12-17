@@ -9,7 +9,7 @@ export const register = async (req, res) => {
   try {
     //Get the data from form
     const { fullname, email, phoneNumber, password, role } = req.body;
-    console.log(fullname, email, phoneNumber, password, role);
+    // console.log(fullname, email, phoneNumber, password, role);
     if (!fullname || !email || !phoneNumber || !password || !role) {
       return res
         .status(400)

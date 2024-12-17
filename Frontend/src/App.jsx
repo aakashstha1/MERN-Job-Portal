@@ -13,7 +13,9 @@ import CompanyCreate from "./components/admin/CompanyCreate";
 import CompanySetup from "./components/admin/CompanySetup";
 import PostJob from "./components/admin/PostJob";
 import Applicants from "./components/admin/Applicants";
-import ProtectedRoute from "./components/admin/ProtectedRoute";
+import PageNotFound from "./components/404";
+
+import { ProtectedRoute } from "./components/admin/ProtectedRoute";
 
 const appRouter = createBrowserRouter([
   {
@@ -99,6 +101,10 @@ const appRouter = createBrowserRouter([
         <Applicants />
       </ProtectedRoute>
     ),
+  },
+  {
+    path: "*",
+    element: <PageNotFound />,
   },
 ]);
 function App() {
